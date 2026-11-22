@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IXI",
+    "RRR"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "X": "minecraft:slime_block",
+    "R": "minecraft:glass"
+  },
+  "result": {
+    "id": "streetdrag:slime_farm",
+    "count": 1
+  }
+}

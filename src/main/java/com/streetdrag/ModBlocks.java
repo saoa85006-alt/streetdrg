@@ -1,5 +1,7 @@
 package com.streetdrag;
 
+import java.util.EnumMap;
+import java.util.Map;
 import java.util.function.Function;
 
 import net.minecraft.core.Registry;
@@ -13,13 +15,17 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public final class ModBlocks {
-	public static final MachineBlock FOUNDRY = machine("foundry", MachineType.FOUNDRY);
-	public static final MachineBlock RUBBER_MIXER = machine("rubber_mixer", MachineType.RUBBER_MIXER);
-	public static final MachineBlock CIRCUIT_ASSEMBLER = machine("circuit_assembler", MachineType.CIRCUIT_ASSEMBLER);
-	public static final MachineBlock TIRE_PRESS = machine("tire_press", MachineType.TIRE_PRESS);
-	public static final MachineBlock NITRO_BREWER = machine("nitro_brewer", MachineType.NITRO_BREWER);
-	public static final MachineBlock ENGINE_ASSEMBLER = machine("engine_assembler", MachineType.ENGINE_ASSEMBLER);
-	public static final MachineBlock CAR_ASSEMBLER = machine("car_assembler", MachineType.CAR_ASSEMBLER);
+	private static final Map<MachineType, MachineBlock> MACHINE_MAP = new EnumMap<>(MachineType.class);
+
+	static {
+		for (MachineType type : MachineType.values()) {
+			MACHINE_MAP.put(type, register(type.id, p -> new MachineBlock(p, type),
+				BlockBehaviour.Properties.of().strength(3.5f, 6.0f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+		}
+	}
+
+	/** Все заводские блоки (порядок как в MachineType). */
+	public static final MachineBlock[] MACHINES = MACHINE_MAP.values().toArray(new MachineBlock[0]);
 
 	public static final Block ASPHALT = register("asphalt", Block::new,
 		BlockBehaviour.Properties.of().strength(1.5f, 6.0f).sound(SoundType.STONE).requiresCorrectToolForDrops());
@@ -28,13 +34,8 @@ public final class ModBlocks {
 	public static final RaceLineBlock RACE_FINISH = register("race_finish", p -> new RaceLineBlock(p, true),
 		BlockBehaviour.Properties.of().strength(1.5f, 6.0f).sound(SoundType.STONE).requiresCorrectToolForDrops());
 
-	public static final MachineBlock[] MACHINES = {
-		FOUNDRY, RUBBER_MIXER, CIRCUIT_ASSEMBLER, TIRE_PRESS, NITRO_BREWER, ENGINE_ASSEMBLER, CAR_ASSEMBLER
-	};
-
-	private static MachineBlock machine(String name, MachineType type) {
-		return register(name, p -> new MachineBlock(p, type),
-			BlockBehaviour.Properties.of().strength(3.5f, 6.0f).sound(SoundType.METAL).requiresCorrectToolForDrops());
+	public static MachineBlock machine(MachineType type) {
+		return MACHINE_MAP.get(type);
 	}
 
 	private static <T extends Block> T register(String name, Function<BlockBehaviour.Properties, T> factory,

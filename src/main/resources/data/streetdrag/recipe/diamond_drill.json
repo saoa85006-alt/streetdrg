@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IXI",
+    "RRR"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "X": "minecraft:diamond_pickaxe",
+    "R": "minecraft:diamond_block"
+  },
+  "result": {
+    "id": "streetdrag:diamond_drill",
+    "count": 1
+  }
+}

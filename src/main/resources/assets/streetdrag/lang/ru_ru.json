@@ -18,5 +18,16 @@
   "item.streetdrag.tire": "Шина",
   "item.streetdrag.nitro": "Нитро",
   "item.streetdrag.car_kit": "Набор для сборки авто",
-  "item.streetdrag.race_coin": "Гоночная монета"
+  "item.streetdrag.race_coin": "Гоночная монета",
+  "block.streetdrag.iron_drill": "Железный бур",
+  "block.streetdrag.coal_drill": "Угольный бур",
+  "block.streetdrag.copper_drill": "Медный бур",
+  "block.streetdrag.redstone_drill": "Редстоун-бур",
+  "block.streetdrag.gold_drill": "Золотой бур",
+  "block.streetdrag.slime_farm": "Ферма слизи",
+  "block.streetdrag.powder_plant": "Пороховой завод",
+  "block.streetdrag.blaze_farm": "Ферма огня",
+  "block.streetdrag.glow_drill": "Бур светопыли",
+  "block.streetdrag.diamond_drill": "Алмазный бур",
+  "entity.streetdrag.car": "Уличный гонщик"
 }

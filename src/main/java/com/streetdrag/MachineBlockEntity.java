@@ -124,6 +124,9 @@ public class MachineBlockEntity extends BlockEntity implements WorldlyContainer 
 				setChanged();
 				return n;
 			}
+			if (!ItemStack.isSameItemSameComponents(cur, stack)) {
+				continue; // нельзя клеить разные предметы в один стак
+			}
 			int space = cur.getMaxStackSize() - cur.getCount();
 			if (space > 0) {
 				int n = Math.min(space, stack.getCount());
@@ -150,6 +153,9 @@ public class MachineBlockEntity extends BlockEntity implements WorldlyContainer 
 		lines.add(Component.translatable("block.streetdrag." + type.id).withStyle(ChatFormatting.GOLD));
 		for (MachineType.Recipe r : type.recipes) {
 			StringBuilder sb = new StringBuilder();
+			if (r.inputs().isEmpty()) {
+				sb.append("Добыча без сырья");
+			}
 			for (MachineType.Ing ing : r.inputs()) {
 				if (sb.length() > 0) {
 					sb.append(" + ");
@@ -161,6 +167,17 @@ public class MachineBlockEntity extends BlockEntity implements WorldlyContainer 
 				.append(" (").append(r.ticks() / 20.0).append(" c)");
 			lines.add(Component.literal(sb.toString()).withStyle(ChatFormatting.GRAY));
 		}
+		StringBuilder inside = new StringBuilder();
+		for (int i = 0; i < getContainerSize(); i++) {
+			ItemStack s = items.get(i);
+			if (!s.isEmpty()) {
+				if (inside.length() > 0) {
+					inside.append(", ");
+				}
+				inside.append(i == OUTPUT ? "[выход] " : "").append(s.getCount()).append("x ").append(s.getHoverName().getString());
+			}
+		}
+		lines.add(Component.literal("Внутри: " + (inside.length() == 0 ? "пусто" : inside)).withStyle(ChatFormatting.AQUA));
 		lines.add(Component.literal("ПКМ предметом — загрузить, Shift+ПКМ — забрать результат. Воронки сверху/сбоку — вход, снизу — выход.")
 			.withStyle(ChatFormatting.DARK_GRAY));
 		return lines;
@@ -183,8 +200,9 @@ public class MachineBlockEntity extends BlockEntity implements WorldlyContainer 
 		output.putInt("Progress", progress);
 	}
 
-	// выпасть содержимое при ломании блока (без @Override — подстраховка от смены сигнатуры)
-	protected void preRemoveSideEffects(BlockPos pos, BlockState state) {
+	// выпасть содержимое при ломании блока
+	@Override
+	public void preRemoveSideEffects(BlockPos pos, BlockState state) {
 		if (level != null) {
 			Containers.dropContents(level, pos, this);
 		}
@@ -245,6 +263,10 @@ public class MachineBlockEntity extends BlockEntity implements WorldlyContainer 
 	@Override
 	public boolean canPlaceItem(int slot, ItemStack stack) {
 		if (slot >= INPUTS || !(getBlockState().getBlock() instanceof MachineBlock block) || !block.type.accepts(stack)) {
+			return false;
+		}
+		ItemStack here = items.get(slot);
+		if (!here.isEmpty() && !ItemStack.isSameItemSameComponents(here, stack)) {
 			return false;
 		}
 		for (int j = 0; j < INPUTS; j++) {

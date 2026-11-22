@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IXI",
+    "RRR"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "X": "minecraft:iron_pickaxe",
+    "R": "minecraft:glowstone"
+  },
+  "result": {
+    "id": "streetdrag:glow_drill",
+    "count": 1
+  }
+}

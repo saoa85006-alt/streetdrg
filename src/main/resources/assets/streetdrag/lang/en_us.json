@@ -18,5 +18,16 @@
   "item.streetdrag.tire": "Tire",
   "item.streetdrag.nitro": "Nitro",
   "item.streetdrag.car_kit": "Car Kit",
-  "item.streetdrag.race_coin": "Race Coin"
+  "item.streetdrag.race_coin": "Race Coin",
+  "block.streetdrag.iron_drill": "Iron Drill",
+  "block.streetdrag.coal_drill": "Coal Drill",
+  "block.streetdrag.copper_drill": "Copper Drill",
+  "block.streetdrag.redstone_drill": "Redstone Drill",
+  "block.streetdrag.gold_drill": "Gold Drill",
+  "block.streetdrag.slime_farm": "Slime Farm",
+  "block.streetdrag.powder_plant": "Gunpowder Plant",
+  "block.streetdrag.blaze_farm": "Blaze Farm",
+  "block.streetdrag.glow_drill": "Glowstone Drill",
+  "block.streetdrag.diamond_drill": "Diamond Drill",
+  "entity.streetdrag.car": "Street Racer"
 }

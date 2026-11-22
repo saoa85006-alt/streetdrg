@@ -7,8 +7,25 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-/** Типы заводских машин и их рецепты. Добавлять новые рецепты сюда. */
+/**
+ * Типы заводских машин и их рецепты. Добавлять новые рецепты сюда
+ * (id должен совпадать с именем блока/текстуры/модели).
+ * Машина без входных ингредиентов — это бур/ферма: сама производит ресурс.
+ */
 public enum MachineType {
+	// ---- добыча (без сырья) ----
+	IRON_DRILL("iron_drill", List.of(recipe(240, () -> Items.IRON_INGOT, 1))),
+	COAL_DRILL("coal_drill", List.of(recipe(120, () -> Items.COAL, 1))),
+	COPPER_DRILL("copper_drill", List.of(recipe(200, () -> Items.COPPER_INGOT, 1))),
+	REDSTONE_DRILL("redstone_drill", List.of(recipe(160, () -> Items.REDSTONE, 2))),
+	GOLD_DRILL("gold_drill", List.of(recipe(300, () -> Items.GOLD_NUGGET, 3))),
+	SLIME_FARM("slime_farm", List.of(recipe(300, () -> Items.SLIME_BALL, 1))),
+	POWDER_PLANT("powder_plant", List.of(recipe(300, () -> Items.GUNPOWDER, 1))),
+	BLAZE_FARM("blaze_farm", List.of(recipe(400, () -> Items.BLAZE_POWDER, 1))),
+	GLOW_DRILL("glow_drill", List.of(recipe(300, () -> Items.GLOWSTONE_DUST, 2))),
+	DIAMOND_DRILL("diamond_drill", List.of(recipe(2400, () -> Items.DIAMOND, 1))),
+
+	// ---- производство деталей ----
 	FOUNDRY("foundry", List.of(
 		recipe(100, ModItems.STEEL_PLATE_S, 1, in(() -> Items.IRON_INGOT, 2), in(() -> Items.COAL, 1))
 	)),

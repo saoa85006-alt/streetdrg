@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IXI",
+    "RRR"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "X": "minecraft:iron_pickaxe",
+    "R": "minecraft:coal_block"
+  },
+  "result": {
+    "id": "streetdrag:coal_drill",
+    "count": 1
+  }
+}
