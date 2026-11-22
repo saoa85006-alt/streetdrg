@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BBB",
+    "BCB",
+    "BDB"
+  ],
+  "key": {
+    "B": "minecraft:iron_block",
+    "C": "minecraft:crafting_table",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "streetdrag:car_assembler",
+    "count": 1
+  }
+}

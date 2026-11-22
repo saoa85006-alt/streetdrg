@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IPI",
+    "SSS"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "P": "minecraft:piston",
+    "S": "minecraft:smooth_stone"
+  },
+  "result": {
+    "id": "streetdrag:tire_press",
+    "count": 1
+  }
+}

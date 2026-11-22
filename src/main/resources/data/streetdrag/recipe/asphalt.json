@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:gravel",
+    "C": "minecraft:coal"
+  },
+  "result": {
+    "id": "streetdrag:asphalt",
+    "count": 8
+  }
+}

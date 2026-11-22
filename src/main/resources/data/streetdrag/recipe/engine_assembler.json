@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IPI",
+    "DDD"
+  ],
+  "key": {
+    "I": "minecraft:iron_block",
+    "P": "minecraft:piston",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "streetdrag:engine_assembler",
+    "count": 1
+  }
+}

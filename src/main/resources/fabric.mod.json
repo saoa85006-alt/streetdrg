@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "streetdrag",
+  "version": "${version}",
+  "name": "Street Drag",
+  "description": "Дрэг-рейсинг в стиле Майнкрафта: заводы, автоматизация, запчасти, трасса и нитро.",
+  "authors": ["SleepSMP"],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.streetdrag.StreetDrag"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

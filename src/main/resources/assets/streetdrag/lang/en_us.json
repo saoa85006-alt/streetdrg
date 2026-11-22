@@ -1,0 +1,22 @@
+{
+  "itemGroup.streetdrag": "Street Drag",
+  "block.streetdrag.foundry": "Foundry",
+  "block.streetdrag.rubber_mixer": "Rubber Mixer",
+  "block.streetdrag.circuit_assembler": "Circuit Assembler",
+  "block.streetdrag.tire_press": "Tire Press",
+  "block.streetdrag.nitro_brewer": "Nitro Brewer",
+  "block.streetdrag.engine_assembler": "Engine Assembler",
+  "block.streetdrag.car_assembler": "Car Assembly Plant",
+  "block.streetdrag.asphalt": "Asphalt",
+  "block.streetdrag.race_start": "Start Line",
+  "block.streetdrag.race_finish": "Finish Line",
+  "item.streetdrag.steel_plate": "Steel Plate",
+  "item.streetdrag.rubber": "Rubber",
+  "item.streetdrag.ecu_chip": "ECU Chip",
+  "item.streetdrag.engine": "Engine",
+  "item.streetdrag.turbo": "Turbo",
+  "item.streetdrag.tire": "Tire",
+  "item.streetdrag.nitro": "Nitro",
+  "item.streetdrag.car_kit": "Car Kit",
+  "item.streetdrag.race_coin": "Race Coin"
+}

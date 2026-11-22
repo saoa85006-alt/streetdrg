@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "IBI",
+    "NNN"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "B": "minecraft:brewing_stand",
+    "N": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "streetdrag:nitro_brewer",
+    "count": 1
+  }
+}

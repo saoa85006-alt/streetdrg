@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "III",
+    "ICI",
+    "SSS"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:cauldron",
+    "S": "minecraft:smooth_stone"
+  },
+  "result": {
+    "id": "streetdrag:rubber_mixer",
+    "count": 1
+  }
+}

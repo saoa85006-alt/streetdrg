@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "streetdrag:asphalt",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "id": "streetdrag:race_start",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "itemGroup.streetdrag": "Street Drag",
+  "block.streetdrag.foundry": "Литейная",
+  "block.streetdrag.rubber_mixer": "Резиносмеситель",
+  "block.streetdrag.circuit_assembler": "Сборщик плат",
+  "block.streetdrag.tire_press": "Шиный пресс",
+  "block.streetdrag.nitro_brewer": "Нитро-варка",
+  "block.streetdrag.engine_assembler": "Сборщик двигателей",
+  "block.streetdrag.car_assembler": "Автосборочный цех",
+  "block.streetdrag.asphalt": "Асфальт",
+  "block.streetdrag.race_start": "Линия старта",
+  "block.streetdrag.race_finish": "Линия финиша",
+  "item.streetdrag.steel_plate": "Стальная пластина",
+  "item.streetdrag.rubber": "Резина",
+  "item.streetdrag.ecu_chip": "Блок управления (ECU)",
+  "item.streetdrag.engine": "Двигатель",
+  "item.streetdrag.turbo": "Турбина",
+  "item.streetdrag.tire": "Шина",
+  "item.streetdrag.nitro": "Нитро",
+  "item.streetdrag.car_kit": "Набор для сборки авто",
+  "item.streetdrag.race_coin": "Гоночная монета"
+}
