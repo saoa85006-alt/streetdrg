@@ -16,7 +16,7 @@ public final class ModItems {
 	public static final Item ENGINE = simple("engine");
 	public static final Item TURBO = simple("turbo");
 	public static final Item TIRE = simple("tire");
-	public static final Item CAR_KIT = simple("car_kit");
+	public static final Item CAR_KIT = register("car_kit", CarKitItem::new);
 	public static final Item RACE_COIN = simple("race_coin");
 	public static final Item NITRO = register("nitro", NitroItem::new);
 

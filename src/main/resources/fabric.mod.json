@@ -8,7 +8,8 @@
   "license": "All-Rights-Reserved",
   "environment": "*",
   "entrypoints": {
-    "main": ["com.streetdrag.StreetDrag"]
+    "main": ["com.streetdrag.StreetDrag"],
+    "client": ["com.streetdrag.StreetDragClient"]
   },
   "depends": {
     "fabricloader": ">=0.18.1",

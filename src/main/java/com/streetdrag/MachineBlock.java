@@ -62,7 +62,8 @@ public class MachineBlock extends BaseEntityBlock {
 		}
 		if (level.getBlockEntity(pos) instanceof MachineBlockEntity be) {
 			if (!type.accepts(stack)) {
-				return InteractionResult.PASS;
+				// пустая рука / левый предмет -> идём в useWithoutItem (рецепты, забрать результат)
+				return InteractionResult.TRY_WITH_EMPTY_HAND;
 			}
 			int moved = be.insertStack(stack);
 			if (moved > 0) {

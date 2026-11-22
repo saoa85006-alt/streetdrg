@@ -15,6 +15,7 @@ public final class ModTab {
 			.title(Component.translatable("itemGroup.streetdrag"))
 			.icon(() -> new ItemStack(ModItems.CAR_KIT))
 			.displayItems((params, out) -> {
+				out.accept(GuideBook.create());
 				for (MachineBlock m : ModBlocks.MACHINES) {
 					out.accept(m);
 				}
